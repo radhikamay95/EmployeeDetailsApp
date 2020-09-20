@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">EmployeeDetails</string>
+    <string name="action_search">search</string>
+    <string name="sort_ascend">ascend list</string>
+    <string name="sort_descend">descend list</string>
+    <string name="lable_id">ID</string>
+    <string name="lable_name">Name</string>
+    <string name="lable_age">Age</string>
+    <string name="lable_salary">Salary</string>
+    <string name="action_sortby">Sort by</string>
+    <string name="action_ascend">A-Z</string>
+    <string name="action_descend">Z-A</string>
+    <string name="image_description">Profile Image</string>
+
+
+</resources>

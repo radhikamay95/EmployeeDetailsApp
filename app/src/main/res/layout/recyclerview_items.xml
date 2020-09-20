@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?><androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_margin="5dp"
+    app:contentPadding="5dp"
+    app:cardCornerRadius="5dp"
+    app:cardBackgroundColor="#e3f2fd"
+    android:elevation="5dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|start"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/employee_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/id_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_person_black_24dp"
+            android:contentDescription="@string/image_description"/>
+
+        <TextView
+            android:id="@+id/id_label"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="67dp"
+            android:layout_marginBottom="3dp"
+            android:text="@string/lable_id"
+            app:layout_constraintBottom_toTopOf="@+id/name_label"
+            app:layout_constraintStart_toEndOf="@+id/employee_image"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/name_label"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="3dp"
+            android:text="@string/lable_name"
+            app:layout_constraintBottom_toTopOf="@+id/age_lab"
+            app:layout_constraintStart_toEndOf="@+id/employee_image"
+            app:layout_constraintTop_toBottomOf="@+id/id_label" />
+
+        <TextView
+            android:id="@+id/age_lab"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="3dp"
+            android:text="@string/lable_age"
+            app:layout_constraintBottom_toTopOf="@+id/salary_label"
+            app:layout_constraintStart_toEndOf="@+id/employee_image"
+            app:layout_constraintTop_toBottomOf="@+id/name_label" />
+
+        <TextView
+            android:id="@+id/salary_label"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="3dp"
+            android:text="@string/lable_salary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/employee_image"
+            app:layout_constraintTop_toBottomOf="@+id/age_lab" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="name_label,id_label,age_lab,salary_label" />
+
+        <TextView
+            android:id="@+id/employee_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="3dp"
+            android:text=""
+            app:layout_constraintBottom_toTopOf="@+id/employee_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier7"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/employee_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="3dp"
+            android:text=""
+            app:layout_constraintBottom_toTopOf="@+id/employee_age"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier7"
+            app:layout_constraintTop_toBottomOf="@+id/employee_id" />
+
+        <TextView
+            android:id="@+id/employee_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="3dp"
+            android:text=""
+            app:layout_constraintBottom_toTopOf="@+id/employee_salary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier7"
+            app:layout_constraintTop_toBottomOf="@+id/employee_name" />
+
+        <TextView
+            android:id="@+id/employee_salary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="3dp"
+            android:text=""
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier7"
+            app:layout_constraintTop_toBottomOf="@+id/employee_age" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>
