@@ -8,10 +8,13 @@ public class RetrofitClient {
     private RetrofitClient() {
     }
 
-
     private static final String BASE_URL = "https://run.mocky.io/v3/";
     private static Retrofit retrofit = null;
 
+    /**
+     * @return
+     * Retrofit client initialization
+     */
     public static Retrofit getClient() {
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()

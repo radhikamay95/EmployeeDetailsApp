@@ -17,8 +17,12 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class EmployeeRepositary {
+
     private Context context;
 
+    /**
+     * @param application
+     */
     public EmployeeRepositary(Application application) {
         this.context = application;
     }
@@ -26,11 +30,9 @@ public class EmployeeRepositary {
     public LiveData<Example> getLiveExample() {
 
         final MutableLiveData<Example> data = new MutableLiveData<>();
-
         //Api client interface initialisation
         ApiInterface apiService = RetrofitClient.getClient().create(ApiInterface.class);
         Call<Example> call = apiService.getExample();
-
 
         call.enqueue(new Callback<Example>() {
 

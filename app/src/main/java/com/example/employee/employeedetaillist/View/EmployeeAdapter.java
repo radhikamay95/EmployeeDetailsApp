@@ -25,6 +25,10 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeAdapter.Emplop
     private List<Datum> empFilteredDetails;
     private final Context context;
 
+    /**
+     * @param empDetails
+     * @param context
+     */
     public EmployeeAdapter(List<Datum> empDetails, Context context) {
         this.empDetails = empDetails;
         this.context = context;
@@ -47,20 +51,22 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeAdapter.Emplop
         holder.name.setText(empFilteredDetails.get(position).getEmployeeName());
         holder.age.setText(empFilteredDetails.get(position).getEmployeeAge());
         holder.salary.setText(empFilteredDetails.get(position).getEmployeeSalary());
-        //glide to bind the image into view
+        //glide lib to bind the image into view
         Glide.with(context).load(empFilteredDetails.get(position).getProfileImage())
                 .apply(RequestOptions.placeholderOf(R.drawable.ic_person_black_24dp))
                 .into(holder.profileImage);
     }
 
     @NonNull
-
-
     @Override
     public int getItemCount() {
         return empFilteredDetails.size();
     }
 
+    /**
+     * @return
+     * method to filter list
+     */
     @Override
     public Filter getFilter() {
         return new Filter() {

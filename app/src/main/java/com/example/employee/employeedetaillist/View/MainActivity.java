@@ -35,7 +35,6 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
-
     private ViewModel viewModel;
     private EmployeeAdapter employeeAdapter;
     private List<Datum> detailsList;
@@ -65,6 +64,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * @param menu
+     * @return
+     * method to search
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
@@ -100,12 +104,16 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    /**
+     * @param item
+     * @return
+     * method to sort list
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
         int menu = item.getItemId();
         switch (menu) {
-
             case R.id.ascend:
                 if (detailsList != null) {
 

@@ -15,8 +15,12 @@ public class ViewModel extends AndroidViewModel {
         super(application);
         employeeRepositary = new EmployeeRepositary(getApplication());
     }
-    // method to get employeerepositary Livedata
-    public LiveData<Example> getDetail() {
+
+    /**
+     * @return
+     *  method to get employeerepositary Livedata
+     */
+     public LiveData<Example> getDetail() {
         return employeeRepositary.getLiveExample();
 
     }
